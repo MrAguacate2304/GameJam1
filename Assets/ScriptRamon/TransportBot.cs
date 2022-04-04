@@ -23,16 +23,19 @@ public class TransportBot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //numrandom = Random.Range(0, maxVectors);
-        //if (numrandom == lastPos && numrandom < maxVectors / 2)
-        //{
-        //    numrandom += 1;
-        //}
-        //else if (numrandom == lastPos && numrandom > maxVectors / 2)
-        //{
-        //    numrandom -= 1;
-        //}
-        //currentDestination = Instantiate(endPrefab, posBot[numrandom], Quaternion.identity);
-
+        transportBot();
+    }
+    void transportBot() 
+    {
+        numrandom = Random.Range(0, maxVectors);
+            if (numrandom == lastPos && numrandom < maxVectors / 2)
+            {
+                numrandom += 1;
+            }
+            else if (numrandom == lastPos && numrandom > maxVectors / 2)
+            {
+                numrandom -= 1;
+            }
+            currentDestination = Instantiate(endPrefab, posBot[numrandom], Quaternion.identity);
     }
 }
