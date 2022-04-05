@@ -17,12 +17,15 @@ public class Player_Controller : MonoBehaviour
     public GameObject PauseMenuCanvas;
     public int health = 3;
     public float coins = 0;
+    //public GameObject Ground_Check;
+    //private groundCheck GroundCheck;
 
     // Start is called before the first frame update
     void Start()
     {
         rb2D = GetComponent<Rigidbody2D>();
         boxCollider2d = transform.GetComponent<BoxCollider2D>();
+        //GroundCheck = Ground_Check.GetComponent<groundCheck>();
     }
 
     // Update is called once per frame
