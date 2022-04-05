@@ -12,6 +12,8 @@ public class Player_Controller : MonoBehaviour
     public float speed;
     public float jumpVelocity = 4f;
     private bool lookLeft = true;
+    bool pause = false;
+    public GameObject PauseMenuCanvas;
 
     // Start is called before the first frame update
     void Start()
@@ -25,6 +27,17 @@ public class Player_Controller : MonoBehaviour
     {
         Move();
         Jump();
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (!pause)
+            {
+                OpenPauseMenu();
+            }
+            else if (pause)
+            {
+                ClosePauseMenu();
+            }
+        }
     }
 
     void Move()
@@ -56,5 +69,17 @@ public class Player_Controller : MonoBehaviour
     {
         RaycastHit2D raycastHit2d = Physics2D.BoxCast(boxCollider2d.bounds.center, boxCollider2d.bounds.size, 0f, Vector2.down * .1f);
         return raycastHit2d.collider != null;
+    }
+    public void OpenPauseMenu()
+    {
+        GameManager.Instance.PauseGame();
+        PauseMenuCanvas.SetActive(true);
+        pause = true;
+    }
+    public void ClosePauseMenu()
+    {
+        GameManager.Instance.ResumeGame();
+        PauseMenuCanvas.SetActive(false);
+        pause = false;
     }
 }
