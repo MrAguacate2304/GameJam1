@@ -25,6 +25,7 @@ public class TransportBot : MonoBehaviour
     {
         transportBot();
     }
+
     void transportBot() 
     {
         numrandom = Random.Range(0, maxVectors);
