@@ -10,24 +10,36 @@ public class TransportBot : MonoBehaviour
     int lastPos = -1;
     GameObject currentDestination;
     public GameObject endPrefab;
+    float contador;
+    public float contador1;
+    public Transform[] posicionBot;
+    
 
     // Start is called before the first frame update
     void Start()
     {
-        maxVectors = 3;
+        maxVectors = 2;
         posBot = new Vector2[maxVectors];
         posBot[0] = new Vector2(7.35f, 2.44f);
         posBot[1] = new Vector2(-6.6f, 2.74f);
+        contador = 0;
+        transportBot();
     }
 
     // Update is called once per frame
     void Update()
     {
-        transportBot();
+        contador += Time.deltaTime;
+        if (contador >= contador1)
+        {
+            transportBot();
+            contador = 0;
+        }
     }
 
     void transportBot() 
     {
+        maxVectors = posicionBot.Length;
         numrandom = Random.Range(0, maxVectors);
             if (numrandom == lastPos && numrandom < maxVectors / 2)
             {
@@ -37,6 +49,6 @@ public class TransportBot : MonoBehaviour
             {
                 numrandom -= 1;
             }
-            currentDestination = Instantiate(endPrefab, posBot[numrandom], Quaternion.identity);
+            transform.position = posicionBot[numrandom].position;      
     }
 }
