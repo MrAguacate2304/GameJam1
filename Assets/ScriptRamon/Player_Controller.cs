@@ -15,6 +15,7 @@ public class Player_Controller : MonoBehaviour
     private bool lookLeft = true;
     bool pause = false;
     public GameObject PauseMenuCanvas;
+    public int health = 2;
 
     // Start is called before the first frame update
     void Start()
@@ -26,6 +27,7 @@ public class Player_Controller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Alive();
         Move();
         Jump();
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -72,25 +74,39 @@ public class Player_Controller : MonoBehaviour
         return raycastHit2d.collider != null;
     }
 
-    //void OnCollisionEnter2D(Collision2D collision)
-    //{
-    //    if (collision.gameObject.tag == "Bot")
-    //    {
-    //        SceneManager.LoadScene(Muerto);
-    //    }
-    //}
-}
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Bot")
+        {
+            health--;
+            Debug.Log("Contacto");
+
+            Debug.Log(health);
+            
+        }
+    }
+
+    private void Alive()
+    {
+        if (health <= 0)
+        {
+            SceneManager.LoadScene("Muerto");
+            Debug.Log("Muerto");
+        }
+    }
+
     public void OpenPauseMenu()
     {
         GameManager.Instance.PauseGame();
         PauseMenuCanvas.SetActive(true);
         pause = true;
     }
+
     public void ClosePauseMenu()
     {
         GameManager.Instance.ResumeGame();
         PauseMenuCanvas.SetActive(false);
         pause = false;
     }
-}
+
 }
