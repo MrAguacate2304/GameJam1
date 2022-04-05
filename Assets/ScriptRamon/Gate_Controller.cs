@@ -3,15 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
 public class Gate_Controller : MonoBehaviour
 {
+    private SpriteRenderer sprite;
 
     public Player_Controller a;
 
+   
     void Start()
     {
         a = FindObjectOfType<Player_Controller>();
     }
+
 
     void OnCollisionEnter2D(Collision2D collision)
     {
@@ -25,3 +29,8 @@ public class Gate_Controller : MonoBehaviour
         }
     }
 }
+
+
+
+
+

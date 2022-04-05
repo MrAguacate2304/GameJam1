@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Timer_Controlle : MonoBehaviour
 {
     public Text contador;
-    private float time = 10f;
+    private float time = 20f;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,6 +16,11 @@ public class Timer_Controlle : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (time == 0f)
+        {
+            time = 20f;
+        }
+
         if (time >= 0 )
         {
             time -= Time.deltaTime;

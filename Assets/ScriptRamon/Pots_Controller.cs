@@ -9,8 +9,6 @@ public class Pots_Controller : MonoBehaviour
 
     public Player_Controller a;
 
-    public int pots = 0;
-
     void Start()
     {
         a = FindObjectOfType<Player_Controller>();

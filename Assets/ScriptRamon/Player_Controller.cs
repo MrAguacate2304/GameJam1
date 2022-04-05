@@ -20,7 +20,6 @@ public class Player_Controller : MonoBehaviour
     //public GameObject Ground_Check;
     //private groundCheck GroundCheck;
 
-    // Start is called before the first frame update
     void Start()
     {
         rb2D = GetComponent<Rigidbody2D>();
@@ -28,7 +27,6 @@ public class Player_Controller : MonoBehaviour
         //GroundCheck = Ground_Check.GetComponent<groundCheck>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         Alive();
@@ -87,6 +85,20 @@ public class Player_Controller : MonoBehaviour
 
             Debug.Log(health);
             
+        }
+    }
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Coin")
+        {
+            coins++;
+            Debug.Log(coins);
+        }
+
+        if (collision.gameObject.tag == "nible")
+        {
+            health = 0;
         }
     }
 

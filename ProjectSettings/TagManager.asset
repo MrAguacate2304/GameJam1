@@ -8,6 +8,8 @@ TagManager:
   - player
   - Ground
   - coin
+  - Coin
+  - nible
   layers:
   - Default
   - TransparentFX
