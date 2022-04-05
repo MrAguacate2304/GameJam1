@@ -1,16 +1,25 @@
 fileFormatVersion: 2
-guid: 6a5619d260237c741a807837abf3ff7f
+guid: 47de9b4ae4623c341a481f4f3c456265
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8025314180272122941
-    second: personatge_run_0
+      213: 3018027465742183933
+    second: personatge_run 1_0
   - first:
-      213: -2738975584484452115
-    second: personatge_run_1
+      213: 2210752604197510875
+    second: personatge_run 1_1
   - first:
-      213: 6478081497765148493
-    second: personatge_run_2
+      213: -7365117321630298226
+    second: personatge_run 1_2
+  - first:
+      213: 5189782499963456025
+    second: personatge_run 1_3
+  - first:
+      213: 1741788593007450516
+    second: personatge_run 1_4
+  - first:
+      213: -6797829935911752953
+    second: personatge_run 1_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -100,7 +109,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: personatge_run_0
+      name: personatge_run 1_0
       rect:
         serializedVersion: 2
         x: 0
@@ -114,14 +123,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3c399f1e54b50a090800000000000000
-      internalID: -8025314180272122941
+      spriteID: dfd6fe96dff22e920800000000000000
+      internalID: 3018027465742183933
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: personatge_run_1
+      name: personatge_run 1_1
       rect:
         serializedVersion: 2
         x: 32
@@ -135,14 +144,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: de81656b7343df9d0800000000000000
-      internalID: -2738975584484452115
+      spriteID: bde567bc7cb2eae10800000000000000
+      internalID: 2210752604197510875
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: personatge_run_2
+      name: personatge_run 1_2
       rect:
         serializedVersion: 2
         x: 64
@@ -156,8 +165,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d477254ccc4c6e950800000000000000
-      internalID: 6478081497765148493
+      spriteID: e8f462b61d8d9c990800000000000000
+      internalID: -7365117321630298226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: personatge_run 1_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91a4cd3efafc50840800000000000000
+      internalID: 5189782499963456025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: personatge_run 1_4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49959083f731c2810800000000000000
+      internalID: 1741788593007450516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: personatge_run 1_5
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70ba67290b149a1a0800000000000000
+      internalID: -6797829935911752953
       vertices: []
       indices: 
       edges: []
