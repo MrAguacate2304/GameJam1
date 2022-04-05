@@ -8,7 +8,7 @@ public class MonedaSpawner : MonoBehaviour
     public GameObject monedaPrefab;
     void Update(){
         timer += Time.deltaTime;
-        if (timer >= 10f)
+        if (timer >= 2.5f)
         {
             timer = 0;
             float x = Random.Range(-6, 5);

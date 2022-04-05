@@ -6,15 +6,27 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 0
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/Nivel 2.unity
+    path: Assets/Scenes/mierdas.unity
     guid: b71cdb3a01c5b244d880fb98e23c5297
   - enabled: 1
     path: Assets/Scenes/Muerto.unity
     guid: 7428d14ca6992fd49a2c0bef3df0c9cf
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/Nivel 1.unity
-    guid: 740a314c16ed61340aa89f16e665b4d9
+    guid: 060abcc6fd7ea5441b00d45316add640
+  - enabled: 1
+    path: Assets/Scenes/Nivel 2.unity
+    guid: 011a8c50a67ab8b4b94dd7d6e07ed5c1
+  - enabled: 1
+    path: Assets/Scenes/Nivel 3.unity
+    guid: 942c1a222809de74fb490eb23aea5566
+  - enabled: 1
+    path: Assets/Scenes/Win.unity
+    guid: 9a3def4a89608c64bbc30139050eb788
   m_configObjects: {}

@@ -20,8 +20,8 @@ public class TransportBot : MonoBehaviour
     {
         maxVectors = 2;
         posBot = new Vector2[maxVectors];
-        posBot[0] = new Vector2(7.35f, 2.44f);
-        posBot[1] = new Vector2(-6.6f, 2.74f);
+        //posBot[0] = new Vector2(7.35f, 2.44f);
+        //posBot[1] = new Vector2(-6.6f, 2.74f);
         contador = 0;
         transportBot();
     }

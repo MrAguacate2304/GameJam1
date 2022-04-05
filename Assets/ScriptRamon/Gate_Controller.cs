@@ -9,6 +9,7 @@ public class Gate_Controller : MonoBehaviour
     private SpriteRenderer sprite;
 
     public Player_Controller a;
+    public int numScene;
 
    
     void Start()
@@ -23,7 +24,7 @@ public class Gate_Controller : MonoBehaviour
         {
             if (a.coins >= 10)
             {
-                SceneManager.LoadScene("Nivel 1");
+                SceneManager.LoadScene(numScene);
                 a.coins = 0;
             }
         }
