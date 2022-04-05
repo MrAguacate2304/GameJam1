@@ -15,7 +15,8 @@ public class Player_Controller : MonoBehaviour
     private bool lookLeft = true;
     bool pause = false;
     public GameObject PauseMenuCanvas;
-    public int health = 2;
+    public int health = 3;
+    public float coins = 0;
 
     // Start is called before the first frame update
     void Start()
