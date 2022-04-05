@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Bot
   - player
+  - Ground
   layers:
   - Default
   - TransparentFX

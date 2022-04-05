@@ -9,11 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5077569945804916633}
-  - component: {fileID: 6566452904209761477}
   - component: {fileID: 5367890659510278340}
   - component: {fileID: 1085395520643957554}
-  - component: {fileID: 1020126107195320115}
   - component: {fileID: 229335127}
+  - component: {fileID: 5713507220842499283}
   m_Layer: 0
   m_Name: Moneda
   m_TagString: Untagged
@@ -35,27 +34,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &6566452904209761477
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5131342551375983211}
-  m_BodyType: 2
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!58 &5367890659510278340
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -66,12 +44,12 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.056821108, y: -2.24465}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 11.579057
 --- !u!212 &1085395520643957554
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -123,19 +101,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1020126107195320115
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5131342551375983211}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 722b7b5ad2c33d740bb5d0fc600ed4a9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  monedaPrefab: {fileID: 5131342551375983211}
 --- !u!95 &229335127
 Animator:
   serializedVersion: 3
@@ -155,3 +120,15 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &5713507220842499283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5131342551375983211}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df145fe8f7aa4384897b86a254a5e430, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
