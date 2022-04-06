@@ -19,19 +19,27 @@ public class Player_Controller : MonoBehaviour
     public float coins = 0;
     //public GameObject Ground_Check;
     //private groundCheck GroundCheck;
+    bool Is_Grounded;
 
     void Start()
     {
         rb2D = GetComponent<Rigidbody2D>();
         boxCollider2d = transform.GetComponent<BoxCollider2D>();
         //GroundCheck = Ground_Check.GetComponent<groundCheck>();
+        Is_Grounded = true;
     }
 
     void Update()
     {
         Alive();
         Move();
-        Jump();
+        
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+
+            Jump();
+        }
+
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (!pause)
@@ -64,17 +72,14 @@ public class Player_Controller : MonoBehaviour
 
     private void Jump()
     {
-        if (IsGrounded() && Input.GetKeyDown(KeyCode.Space))
-        {
-            rb2D.velocity = Vector2.up * jumpVelocity;
-        }
+        rb2D.velocity = Vector2.up * jumpVelocity;
     }
 
-    private bool IsGrounded()
-    {
-        RaycastHit2D raycastHit2d = Physics2D.BoxCast(boxCollider2d.bounds.center, boxCollider2d.bounds.size, 0f, Vector2.down * .1f);
-        return raycastHit2d.collider != null;
-    }
+    //private bool IsGrounded()
+    //{
+    //    RaycastHit2D raycastHit2d = Physics2D.BoxCast(boxCollider2d.bounds.center, boxCollider2d.bounds.size, 0f, Vector2.down * .1f);
+    //    return raycastHit2d.collider != null;
+    //}
 
     void OnCollisionEnter2D(Collision2D collision)
     {
@@ -85,6 +90,14 @@ public class Player_Controller : MonoBehaviour
 
             Debug.Log(health);
             
+        }
+        
+    }
+    private void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.CompareTag("Ground"))
+        {
+            Is_Grounded = true;
         }
     }
 
